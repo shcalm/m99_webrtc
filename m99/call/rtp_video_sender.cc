@@ -250,7 +250,7 @@ std::vector<RtpStreamSender> CreateRtpStreamSenders(
                   !rtp_config.rtx.ssrcs.empty());
 
     configuration.need_rtp_packet_infos = rtp_config.lntf.enabled;
-
+  //hua2 create rtp_rtcp
     std::unique_ptr<ModuleRtpRtcpImpl2> rtp_rtcp(
         ModuleRtpRtcpImpl2::Create(configuration));
     rtp_rtcp->SetSendingStatus(false);
